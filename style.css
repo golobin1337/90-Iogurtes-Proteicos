@@ -24,6 +24,7 @@
   :root{color-scheme:light}
 
   *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
   body{background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   h1,h2,h3{font-family:var(--font-display);font-weight:800;line-height:1.1;text-wrap:balance;margin:0}
   p{margin:0}
