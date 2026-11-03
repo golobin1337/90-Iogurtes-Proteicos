@@ -190,6 +190,17 @@
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
   .reveal.in{opacity:1;transform:none}
 
+  /* popup de desconto (reaproveita .lightbox e .plan.premium) */
+  .upsell .close{z-index:1}
+  .plan.upsell-box{width:100%;max-width:420px;max-height:100%;overflow-y:auto;transform:none;padding:20px 18px;animation:upsell-in .25s ease}
+  @keyframes upsell-in{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  .upsell-badge{width:fit-content;margin:0 auto 8px;background:var(--pink-deep);color:#fff;font-family:var(--font-display);font-weight:700;font-size:.74rem;padding:4px 12px;border-radius:999px}
+  .upsell-box .plan-sub{margin-bottom:12px}
+  .upsell-box ul{gap:6px;margin-bottom:14px}
+  .upsell-box ul li{font-size:.84rem}
+  .upsell-recusar{display:block;margin-top:14px;text-align:center;font-size:.82rem;font-weight:600;color:var(--ink-soft);text-decoration:underline}
+  @media (prefers-reduced-motion:reduce){.plan.upsell-box{animation:none}}
+
   @media (max-width:380px){
     .benefits{grid-template-columns:1fr}
     .bonus{flex-direction:column;text-align:center;align-items:center}

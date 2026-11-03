@@ -65,6 +65,29 @@
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
 })();
 
+// Popup de desconto ao clicar no Plano Básico
+(function(){
+  var btn=document.getElementById('btnBasico');
+  var pop=document.getElementById('upsell');
+  var close=document.getElementById('upsellClose');
+  if(!btn||!pop)return;
+  function fechar(){
+    if(!pop.classList.contains('open'))return;
+    pop.classList.remove('open');
+    document.body.style.overflow='';
+    btn.focus();
+  }
+  btn.addEventListener('click',function(ev){
+    ev.preventDefault();
+    pop.classList.add('open');
+    document.body.style.overflow='hidden';
+    close.focus();
+  });
+  close.addEventListener('click',fechar);
+  pop.addEventListener('click',function(e){if(e.target===pop)fechar();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')fechar();});
+})();
+
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach(function(b){
   b.addEventListener('click',function(){
