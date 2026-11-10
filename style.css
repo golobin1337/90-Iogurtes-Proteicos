@@ -130,7 +130,7 @@
   .bonus .bprice .free{color:var(--green);background:var(--green-soft);padding:2px 8px;border-radius:999px}
 
   /* ---- plans ---- */
-  .plans{display:flex;flex-direction:column;gap:20px;margin-top:10px}
+  .plans{display:flex;flex-direction:column;gap:20px;margin-top:30px}
   .plan{border-radius:22px;padding:24px 20px;position:relative;background:var(--surface);border:1px solid var(--line)}
   /* basic plan — quieter */
   .plan.basic{box-shadow:var(--shadow);opacity:.96}
@@ -140,7 +140,7 @@
   .plan.basic ul li.no{color:var(--ink-soft);opacity:.75}
   .plan.basic ul li.no .ic{color:#d64545}
   /* premium plan — the hero (light, destacado) */
-  .plan.premium{background:linear-gradient(170deg,#fff,var(--pink-soft));border:2.5px solid var(--pink);box-shadow:var(--shadow-lg);transform:scale(1.02)}
+  .plan.premium{background:linear-gradient(170deg,#fff,var(--pink-soft));border:2.5px solid var(--pink);box-shadow:var(--shadow-lg);transform:scale(1.02);padding-top:34px}
   .plan.premium .plan-name{color:var(--pink-deep)}
   .plan.premium .pbig{color:var(--pink-deep);text-shadow:0 2px 16px rgba(255,61,148,.25)}
   .plan.premium .plan-sub{color:var(--ink-soft)}
