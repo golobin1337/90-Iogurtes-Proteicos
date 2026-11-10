@@ -137,6 +137,8 @@
   .plan.basic .plan-name{color:var(--ink-soft)}
   .plan.basic .pbig{color:var(--ink)}
   .plan.basic ul li .ic{color:var(--ink-soft)}
+  .plan.basic ul li.no{color:var(--ink-soft);opacity:.75}
+  .plan.basic ul li.no .ic{color:#d64545}
   /* premium plan — the hero (light, destacado) */
   .plan.premium{background:linear-gradient(170deg,#fff,var(--pink-soft));border:2.5px solid var(--pink);box-shadow:var(--shadow-lg);transform:scale(1.02)}
   .plan.premium .plan-name{color:var(--pink-deep)}
