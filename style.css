@@ -161,6 +161,16 @@
   .plan .micro{text-align:center;font-size:.74rem;font-weight:700;margin-top:12px;position:relative;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
   .plan .micro span{display:inline-flex;align-items:center;gap:4px;color:var(--ink);background:var(--pink-soft);padding:5px 10px;border-radius:999px}
   .plan.premium .micro span{background:#fff;color:var(--pink-deep);box-shadow:0 2px 8px rgba(224,26,119,.12)}
+  /* premium: vídeo aulas, selo dos bônus, caixa de valor e custo por receita */
+  .video-card{display:flex;align-items:center;gap:12px;background:var(--dark);color:#fff;border-radius:16px;padding:14px 16px;margin:0 0 16px;position:relative;box-shadow:0 8px 20px rgba(35,16,24,.25)}
+  .video-card .play{flex:none;width:40px;height:40px;border-radius:50%;background:linear-gradient(180deg,#ff5aa5,var(--pink-deep));box-shadow:0 0 0 5px rgba(255,61,148,.25);position:relative}
+  .video-card .play::after{content:"";position:absolute;left:16px;top:13px;border-left:11px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent}
+  .video-card strong{display:block;font-family:var(--font-display);font-weight:800;font-size:1.02rem;line-height:1.2}
+  .video-card .vsub{display:block;font-size:.78rem;opacity:.8;line-height:1.3}
+  .bonus-pill{text-align:center;font-size:.78rem;font-weight:800;color:var(--pink-deep);background:#fff;border:1.5px dashed var(--pink);border-radius:999px;padding:7px 12px;margin:0 0 14px;position:relative}
+  .value-box{text-align:center;font-size:.86rem;font-weight:600;color:var(--ink);background:#fff8d6;border:1.5px solid var(--gold);border-radius:14px;padding:12px 14px;margin:0 0 16px;position:relative}
+  .value-box strong{color:var(--pink-deep)}
+  .per-recipe{text-align:center;font-size:.84rem;font-weight:800;color:var(--green);margin-bottom:2px;position:relative}
   .cta.ghost{background:var(--surface);color:var(--pink-deep);border:2px solid var(--pink);box-shadow:none;animation:none}
   .cta.ghost:hover{background:var(--pink-soft)}
 
