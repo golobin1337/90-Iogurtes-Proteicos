@@ -251,6 +251,16 @@
 
 <script defer src="https://www.lcktracking.online/t.js" data-base="https://www.lcktracking.online"></script>
 
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest('a[href*="pay.wiapy.com"]');
+  if (!a || !window.lck || !window.lck.id) return;
+  var u = new URL(a.href);
+  u.searchParams.set('utm_content', window.lck.id);
+  a.href = u.toString();
+});
+</script>
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
