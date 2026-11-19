@@ -252,13 +252,33 @@
 <script defer src="https://www.lcktracking.online/t.js" data-base="https://www.lcktracking.online"></script>
 
 <script>
-document.addEventListener('click', function (e) {
-  var a = e.target.closest('a[href*="pay.wiapy.com"]');
-  if (!a || !window.lck || !window.lck.id) return;
-  var u = new URL(a.href);
-  u.searchParams.set('utm_content', window.lck.id);
-  a.href = u.toString();
-});
+(function () {
+  // espera o snippet (window.lck) ficar pronto
+  function whenReady(cb) {
+    var n = 0, t = setInterval(function () {
+      if (window.lck && window.lck.id) { clearInterval(t); cb(); }
+      else if (++n > 40) clearInterval(t); // desiste após ~6s
+    }, 150);
+  }
+  whenReady(function () {
+    var links = document.querySelectorAll('a[href*="pay.wiapy.com"]');
+    links.forEach(function (a) {
+      // 1) injeta o utm_content (= trck_user_id) na URL do checkout
+      try {
+        var u = new URL(a.href);
+        u.searchParams.set('utm_content', window.lck.id);
+        a.href = u.toString();
+      } catch (e) {}
+      // 2) dispara InitiateCheckout no clique (value opcional via data-value)
+      a.addEventListener('click', function () {
+        var v = parseFloat(a.getAttribute('data-value'));
+        var params = { currency: 'BRL' };
+        if (!isNaN(v)) params.value = v;
+        window.lck.track('InitiateCheckout', params);
+      });
+    });
+  });
+})();
 </script>
 
 <!-- Meta Pixel Code -->
